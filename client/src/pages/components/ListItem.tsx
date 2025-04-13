@@ -20,13 +20,13 @@ const ListItem: React.FC<ListItemProps> = ({
 	return (
 		<li className={isActive ? 'list-item active' : 'list-item'}>
 			<Link to={`/${id}`}>
-				<div className='list-item-actions'>
-					<div>
-						ID: <b>{id}</b>
-					</div>
-				</div>
-				<div>{name}</div>
-				<div className='list-item__description'>{description}</div>
+				<p className='list-item__id'>
+					ID: <strong>{id}</strong>
+				</p>
+				<p className='list-item__name'>
+					<strong>{name}</strong>
+				</p>
+				<p className='list-item__description'>{description}</p>
 			</Link>
 
 			<div className='list-item-button'>

@@ -257,6 +257,11 @@ li {
 		color: black;
 	}
 
+	p {
+		padding: 0;
+		margin: 0;
+	}
+
 	&.active {
 		background-color: #dfbbbb;
 	}
@@ -289,6 +294,11 @@ li {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	gap: 0.5rem;
+	p {
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .error {

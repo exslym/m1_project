@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 interface ListPaginationProps {
 	currentPage: number;
@@ -13,19 +14,21 @@ const ListPagination: React.FC<ListPaginationProps> = ({
 }) => {
 	return (
 		<div className='list-pagination'>
-			<button
-				disabled={currentPage === 1}
+			<Button
+				id={undefined}
 				onClick={() => onPageChange(currentPage - 1)}
+				disabled={currentPage === 1}
 			>
 				Prev
-			</button>
+			</Button>
 			<span>{`Page ${currentPage} of ${totalPages}`}</span>
-			<button
-				disabled={currentPage === totalPages}
+			<Button
+				id={undefined}
 				onClick={() => onPageChange(currentPage + 1)}
+				disabled={currentPage === totalPages}
 			>
 				Next
-			</button>
+			</Button>
 		</div>
 	);
 };
