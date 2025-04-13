@@ -1,88 +1,82 @@
 html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
 }
-
-
 
 body {
-  margin: 0;
+	margin: 0;
+	padding: 0;
+	height: 100svh;
 }
-
 
 main {
-  display: block;
+	display: block;
 }
-
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+	font-size: 2em;
+	margin: 0.67em 0;
 }
-
-
 
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
 }
-
 
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
-
-
 
 a {
-  background-color: transparent;
+	background-color: transparent;
 }
-
 
 abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
 }
-
 
 b,
 strong {
-  font-weight: bolder;
+	font-weight: bolder;
 }
-
 
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 img {
-  border-style: none;
+	border-style: none;
+}
+
+button {
+	cursor: pointer;
 }
 
 button,
@@ -90,171 +84,213 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
 }
 
 button,
 input {
-  overflow: visible;
+	overflow: visible;
 }
 
 button,
 select {
-  text-transform: none;
+	text-transform: none;
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
 }
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+	outline: 1px dotted ButtonText;
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+	padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
 }
 
 progress {
-  vertical-align: baseline;
+	vertical-align: baseline;
 }
 
 textarea {
-  overflow: auto;
+	overflow: auto;
 }
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
 }
 
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
 }
 
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
 }
-
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
+	-webkit-appearance: button;
+	font: inherit;
 }
 
 details {
-  display: block;
+	display: block;
 }
 
 summary {
-  display: list-item;
+	display: list-item;
 }
 
 template {
-  display: none;
+	display: none;
 }
 
-ul, li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 [hidden] {
-  display: none;
+	display: none;
 }
 
 //
 
 .list-wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100vh;
-  overflow: hidden;
+	// display: grid;
+	// grid-template-rows: auto 1fr;
+	// height: 100vh;
+	padding: 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .list-container {
-  overflow-y: auto;
-  overflow-x: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
 }
 
-.list-header {
+.list-header,
+.list-subtitle {
+	text-align: center;
+}
 
+.list-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.list-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .list {
-  padding: 16px;
+	padding: 16px;
 
-  & > li:not(:last-child) {
-    margin-top: 8px;
-  }
+	& > li:not(:last-child) {
+		margin-top: 8px;
+	}
 }
 
 .list-item {
-  background-color: #dcdbdb;
-  border-radius: 8px;
+	background-color: #dcdbdb;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
 
-  & > a {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-  }
+	& > a {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+	}
 
-  * {
-    text-decoration: none;
-    color: black;
-  }
+	* {
+		text-decoration: none;
+		color: black;
+	}
 
-  &.active {
-    background-color: #dfbbbb;
-  }
+	&.active {
+		background-color: #dfbbbb;
+	}
 
-  &:hover {
-    background-color: #d3c5c5;
-  }
+	&:hover {
+		background-color: #d3c5c5;
+	}
+}
+
+.list-item-button {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
 }
 
 .list-item__description {
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .list-item-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.detail {
+	padding: 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.error {
+	color: red;
 }

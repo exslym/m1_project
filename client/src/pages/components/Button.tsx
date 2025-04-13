@@ -1,13 +1,24 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo } from 'react';
 
-const Button: React.FC<any> = ({ onClick, id, disabled, children }) => {
-	const handleClick = useCallback(() => {
-		onClick(id);
-	}, []);
-	
-	return (
-		<button onClick={handleClick} disabled={disabled}>{children}</button>
-	)
+interface ButtonProps {
+	onClick: (id: number) => void; // Handler for button click, receives the item ID
+	id?: number; // Optional ID associated with the button
+	disabled?: boolean; // Whether the button is disabled
+	children: React.ReactNode; // Content inside the button
 }
+
+const Button: React.FC<ButtonProps> = ({ onClick, id, disabled, children }) => {
+	const handleClick = () => {
+		if (onClick && id !== undefined) {
+			onClick(id); // Call the handler with the ID
+		}
+	};
+
+	return (
+		<button onClick={handleClick} disabled={disabled}>
+			{children}
+		</button>
+	);
+};
 
 export default memo(Button);
