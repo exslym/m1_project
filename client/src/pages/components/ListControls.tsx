@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 
 interface ListControlsProps {
 	isAscending: boolean;
@@ -15,9 +16,9 @@ const ListControls: React.FC<ListControlsProps> = ({
 }) => {
 	return (
 		<div className='list-controls'>
-			<button onClick={onSortClick}>
+			<Button id={undefined} onClick={onSortClick} disabled={false}>
 				Sort ({isAscending ? 'ASC' : 'DESC'})
-			</button>
+			</Button>
 			<input
 				type='text'
 				placeholder='Filter by ID'

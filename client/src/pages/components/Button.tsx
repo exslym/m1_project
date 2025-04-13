@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 interface ButtonProps {
-	onClick: (id: number) => void; // Handler for button click, receives the item ID
+	onClick: ((id: number) => void) | (() => void); // Handler for button click
 	id?: number; // Optional ID associated with the button
 	disabled?: boolean; // Whether the button is disabled
 	children: React.ReactNode; // Content inside the button
@@ -9,8 +9,14 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ onClick, id, disabled, children }) => {
 	const handleClick = () => {
-		if (onClick && id !== undefined) {
-			onClick(id); // Call the handler with the ID
+		if (onClick) {
+			if (id !== undefined) {
+				// If ID is defined, call the handler with the ID
+				(onClick as (id: number) => void)(id);
+			} else {
+				// If ID is not needed, call the handler without parameters
+				(onClick as () => void)();
+			}
 		}
 	};
 
